@@ -7,14 +7,14 @@ import com.rusfolio.model.Sector;
 public class Stock {
 
 	private String tickerSymbol;
-	private BigDecimal value;
+	private Integer value;
 	private Sector sector;
 
 	public String getTickerSymbol() {
 		return tickerSymbol;
 	}
 
-	public BigDecimal getValue() {
+	public Integer getValue() {
 		return value;
 	}
 
@@ -26,7 +26,7 @@ public class Stock {
 		this.tickerSymbol = symbol;
 	}
 
-	public void setValue(BigDecimal value) {
+	public void setValue(Integer value) {
 		this.value = value;
 		
 	}

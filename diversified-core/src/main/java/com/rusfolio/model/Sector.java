@@ -1,6 +1,6 @@
 package com.rusfolio.model;
 
 public enum Sector {
-	TECHNOLOGY
+	TECHNOLOGY, INDUSTRIAL, CONSUMER_DISCRETIONARY, HEALTH, ENERGY
 
 }
