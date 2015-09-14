@@ -22,7 +22,7 @@ import com.rusfolio.model.Sector;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:build-test.xml")
 
-public class AmIDiversifiedTest {
+public class DiversifiedCheckerTest {
 	
 	@Autowired
 	private DiversifiedChecker diversifiedChecker;
@@ -69,7 +69,7 @@ public class AmIDiversifiedTest {
 
 		stock3.setTickerSymbol(skechersSymbol);
 		stock3.setValue(thousandDollars);
-		stock3.setSector(Sector.CONSUMER_DISCRETIONARY);
+		stock3.setSector(Sector.FINANCIALS);
 		
 		stock4.setTickerSymbol(isisSymbol);
 		stock4.setValue(thousandDollars);
@@ -92,6 +92,53 @@ public class AmIDiversifiedTest {
 		
 		DiversifiedResult result = diversifiedChecker.check(stocks);
 		assertEquals(result.getResult(), DiversifiedResultType.DIVERSIFIED);
+		
+	}
+	
+	@Test
+	public void test5StocksOneHasTwoThousandNotDiversified(){
+		List<Stock> stocks = new ArrayList<Stock>();
+		Stock stock1 = new Stock();
+		Stock stock2 = new Stock();
+		Stock stock3 = new Stock();
+		Stock stock4 = new Stock();
+		Stock stock5 = new Stock();
+		String appleSymbol = "AAPL";
+		Integer thousandDollars = new Integer(1000);
+		Integer twoThousandDollars = new Integer(2000);
+		stock1.setTickerSymbol(appleSymbol);
+		stock1.setValue(thousandDollars);
+		stock1.setSector(Sector.TECHNOLOGY);
+		
+		String boeingSymbol = "BA";
+		String skechersSymbol = "SKX";
+		String isisSymbol = "ISIS";
+		String dominosSymbol = "DPZ";
+				
+		stock2.setTickerSymbol(boeingSymbol );
+		stock2.setValue(thousandDollars);
+		stock2.setSector(Sector.INDUSTRIAL);
+
+		stock3.setTickerSymbol(skechersSymbol);
+		stock3.setValue(twoThousandDollars);
+		stock3.setSector(Sector.CONSUMER_DISCRETIONARY);
+		
+		stock4.setTickerSymbol(isisSymbol);
+		stock4.setValue(thousandDollars);
+		stock4.setSector(Sector.HEALTH);
+		
+		stock5.setTickerSymbol(dominosSymbol);
+		stock5.setValue(thousandDollars);
+		stock5.setSector(Sector.CONSUMER_DISCRETIONARY);
+		
+		stocks.add(stock1);
+		stocks.add(stock2);
+		stocks.add(stock3);
+		stocks.add(stock4);
+		stocks.add(stock5);
+		
+		DiversifiedResult result = diversifiedChecker.check(stocks);
+		assertEquals(result.getResult(), DiversifiedResultType.NOT_DIVERSIFIED);
 		
 	}
 }
