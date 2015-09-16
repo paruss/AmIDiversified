@@ -2,8 +2,6 @@ package com.rusfolio.diversified.model;
 
 import java.math.BigDecimal;
 
-import com.rusfolio.model.Sector;
-
 public class Stock {
 
 	private String tickerSymbol;
