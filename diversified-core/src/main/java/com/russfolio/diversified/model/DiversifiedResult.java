@@ -1,4 +1,4 @@
-package com.rusfolio.diversified.model;
+package com.russfolio.diversified.model;
 
 
 public class DiversifiedResult {

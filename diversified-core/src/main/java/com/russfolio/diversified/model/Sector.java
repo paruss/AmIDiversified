@@ -1,4 +1,4 @@
-package com.rusfolio.diversified.model;
+package com.russfolio.diversified.model;
 
 public enum Sector {
 	TECHNOLOGY, INDUSTRIAL, CONSUMER_DISCRETIONARY, HEALTH, ENERGY, FINANCIALS, UTILITIES, TELECOMMUNICATION_SERVICES

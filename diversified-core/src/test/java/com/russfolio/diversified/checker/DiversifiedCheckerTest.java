@@ -1,4 +1,4 @@
-package com.rusfolio.diversified.checker;
+package com.russfolio.diversified.checker;
 
 
 import static org.junit.Assert.assertEquals;
@@ -12,11 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.rusfolio.diversified.checker.DiversifiedChecker;
-import com.rusfolio.diversified.model.DiversifiedResult;
-import com.rusfolio.diversified.model.DiversifiedResultType;
-import com.rusfolio.diversified.model.Sector;
-import com.rusfolio.diversified.model.Stock;
+import com.russfolio.diversified.checker.DiversifiedChecker;
+import com.russfolio.diversified.model.DiversifiedResult;
+import com.russfolio.diversified.model.DiversifiedResultType;
+import com.russfolio.diversified.model.Sector;
+import com.russfolio.diversified.model.Stock;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)

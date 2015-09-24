@@ -1,14 +1,14 @@
-package com.rusfolio.diversified.checker;
+package com.russfolio.diversified.checker;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import com.rusfolio.diversified.model.DiversifiedResult;
-import com.rusfolio.diversified.model.DiversifiedResultType;
-import com.rusfolio.diversified.model.Sector;
-import com.rusfolio.diversified.model.Stock;
+import com.russfolio.diversified.model.DiversifiedResult;
+import com.russfolio.diversified.model.DiversifiedResultType;
+import com.russfolio.diversified.model.Sector;
+import com.russfolio.diversified.model.Stock;
 
 public class DiversifiedChecker {
 
