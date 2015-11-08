@@ -11,5 +11,8 @@
         http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
         http://www.springframework.org/schema/context 
         http://www.springframework.org/schema/context/spring-context-3.2.xsd">
-    <bean name="diversifiedChecker" class="com.russfolio.diversified.checker.DiversifiedChecker"/>
+    <bean name="diversifiedChecker" class="com.russfolio.diversified.checker.DiversifiedChecker"
+    </bean>
+    <bean name="companyListFileParser" ref="com.russfolio.diversified.matcher.CompanyListFileParser">
+    </bean>
 </beans>
